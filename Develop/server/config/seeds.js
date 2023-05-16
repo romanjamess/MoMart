@@ -5,8 +5,33 @@ db.once('open', async () => {
   await Category.deleteMany();
 
   const categories = await Category.insertMany([
-    // this is the example format for all of the categories carried over from previous Thingamabobs
-    // { name: 'Food' },
+    {
+      name: 'Sporting Goods',
+    },
+    {
+      name: 'Electronics',
+    },
+    {
+      name: 'Apparel',
+    },
+    {
+      name: 'Accessories',
+    },
+    {
+      name: 'Shoes',
+    },
+    {
+      name: 'Motors',
+    },
+    {
+      name: 'Collectibles',
+    },
+    {
+      name: 'Toys',
+    },
+    {
+      name: 'Home & Garden',
+    },
   ]);
 
   console.log('categories seeded');
@@ -30,18 +55,38 @@ db.once('open', async () => {
 
   await User.deleteMany();
 
-  await User.create({
-    // this is the example format for all of the users carried over from previous Thingamabobs
-    // firstName: 'Pamela',
-    // lastName: 'Washington',
-    // email: 'pamela@testmail.com',
-    // password: 'password12345',
-    // orders: [
-    //   {
-    //     products: [products[0]._id, products[0]._id, products[1]._id],
-    //   },
-    // ],
-  });
+  await User.insertMany([
+    {
+      firstName: 'Amrita',
+      lastName: 'Raja',
+      email: 'amrita@gmail.com',
+      password: 'password12345',
+    },
+    {
+      firstName: 'Daniel',
+      lastName: 'Bradley',
+      email: 'daniel@gmail.com',
+      password: 'password12345',
+    },
+    {
+      firstName: 'Matthew',
+      lastName: 'Nguyen',
+      email: 'matthew@gmail.com',
+      password: 'password12345',
+    },
+    {
+      firstName: 'Theresa',
+      lastName: 'Cao',
+      email: 'theresa@gmail.com',
+      password: 'password12345',
+    },
+    {
+      firstName: 'George',
+      lastName: 'Jordan',
+      email: 'george@gmail.com',
+      password: 'password12345',
+    },
+  ]);
 
   console.log('users seeded');
 

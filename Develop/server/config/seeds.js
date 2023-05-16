@@ -49,6 +49,15 @@ db.once('open', async () => {
     //   price: 2.99,
     //   quantity: 500,
     // },
+
+    {
+      name: 'Plain T-Shirt',
+      description: 'This is your plain white t shirt',
+      image: 'plaintshirt.jpg',
+      category: categories[3]._id,
+      price: 14.99,
+      quantity: 14,
+    }
   ]);
 
   console.log('products seeded');

@@ -9,7 +9,7 @@ import {
 } from 'react-bootstrap';
 
 import Auth from '../utils/auth';
-import { searchGoogleBooks } from '../utils/API';
+// import { searchGoogleBooks } from '../utils/API';
 import { saveBookIds, getSavedBookIds } from '../utils/localStorage';
 import { useMutation } from '@apollo/client';
 import { SAVE_BOOK } from '../utils/mutations';
@@ -38,23 +38,23 @@ const SearchBooks = () => {
     }
 
     try {
-      const response = await searchGoogleBooks(searchInput);
+      // const response = await searchGoogleBooks(searchInput);
 
-      if (!response.ok) {
-        throw new Error('something went wrong!');
-      }
+      // if (!response.ok) {
+      //   throw new Error('something went wrong!');
+      // }
 
-      const { items } = await response.json();
+      // const { items } = await response.json();
 
-      const bookData = items.map((book) => ({
-        bookId: book.id,
-        authors: book.volumeInfo.authors || ['No author to display'],
-        title: book.volumeInfo.title,
-        description: book.volumeInfo.description,
-        image: book.volumeInfo.imageLinks?.thumbnail || '',
-      }));
+      // const bookData = items.map((book) => ({
+      //   bookId: book.id,
+      //   authors: book.volumeInfo.authors || ['No author to display'],
+      //   title: book.volumeInfo.title,
+      //   description: book.volumeInfo.description,
+      //   image: book.volumeInfo.imageLinks?.thumbnail || '',
+      // }));
 
-      setSearchedBooks(bookData);
+      // setSearchedBooks(bookData);
       setSearchInput('');
     } catch (err) {
       console.error(err);

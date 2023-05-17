@@ -57,7 +57,27 @@ db.once('open', async () => {
       category: categories[3]._id,
       price: 14.99,
       quantity: 14,
-    }
+    },
+
+    {
+      name: "Snoop Dogg's Blue Track Suit",
+      image: 'tracksuit.jpg',
+      description:
+        'Original Sweat Suit worn by uncle Snoop as seen on the Super Bowl Halftime show',
+      price: 3999999.99,
+      quantity: 1,
+      category: categories[3]._id,
+    },
+
+    {
+      name: 'Edible Crayons',
+      image: 'ediblecrayons.jpg',
+      description:
+        'Paint your mouth by chewing bubble yum',
+      price: 49.99,
+      quantity: 400,
+      category: categories[8]._id,
+    },
   ]);
 
   console.log('products seeded');

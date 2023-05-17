@@ -2,49 +2,59 @@ import { gql } from '@apollo/client';
 
 
 export const ADD_USER = gql`
-mutation addUser($username: String!, $email: String!, $password: String!) {
-  addUser(username: $username, email: $email, password: $password) {
+mutation addUser($firstName: String!, $lastName: String!, $email: String!, $password: String!) {
+  addUser(firstName: $firstName, lastName: $lastName, email: $email, password: $password) {
     token
     user {
-      username
+      firstName
     }
   }
 }
 `;
 
 export const LOGIN_USER = gql`
-mutation loginUser($email: String! , $password: String!){
-  loginUser(email: $email , password: $password){
-    token 
+mutation loginUser($email: String!, $password: String!) {
+  login(email: $email, password: $password) {
+    token
     user {
       _id
-      username
+      firstName
     }
   }
 }
 `
-export const SAVE_BOOK = gql `
-mutation saveBook($authors: [String!], $bookId: String!, $image: String!, $link: String, $title: String!, $description: String!) {
-  saveBook(authors: $authors, bookId: $bookId, image: $image, link: $link, title: $title, description: $description ) {
+export const ADD_ORDER= gql `
+mutation addOrder($products: [ID]!) {
+  addOrder(products: $products) {
     _id
-    savedBooks {
-      bookId
-      description
-      authors
+    products {
+      name
+      quantity
+      price
       image
-      link
-      title
     }
   }
-}`
+}
+`
 
-export const REMOVE_BOOK = gql `
-mutation RemoveBook($bookId: String!) {
-  removeBook(bookId: $bookId) {
+export const UPDATE_USER = gql `
+mutation updateUser($firstName: String, $lastName: String, $email: String, $password: String) {
+  updateUser(firstName: $firstName, lastName: $lastName, email: $email, password: $password) {
     _id
-    savedBooks {
-      bookId
-    }
+    email
+    firstName
+    lastName
+  }
+}
+`
+export const UPDATE_PRODUCT= gql `
+mutation updateProduct($id: ID!, $quantity: Int!) {
+  updateProduct(_id: $id, quantity: $quantity) {
+    _id
+    name
+    quantity
+    image
+    price
   }
 }
 `

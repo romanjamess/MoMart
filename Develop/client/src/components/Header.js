@@ -8,7 +8,7 @@ export default function Header (){
             <img src={Logo} alt="Thingamabobs"/>
             </Link> 
 
-            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <a href='/' role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>

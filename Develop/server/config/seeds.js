@@ -61,12 +61,12 @@ db.once('open', async () => {
 
     {
       name: "Snoop Dogg's Blue Track Suit",
-      image: 'tracksuit.jpg',
       description:
         'Original Sweat Suit worn by uncle Snoop as seen on the Super Bowl Halftime show',
-      price: 3999999.99,
-      quantity: 1,
+      image: 'tracksuit.jpg',
       category: categories[3]._id,
+      price: 3999999.99,
+      quantity: 1,      
     },
 
     {
@@ -78,6 +78,260 @@ db.once('open', async () => {
       quantity: 400,
       category: categories[8]._id,
     },
+
+    {
+      name: '',
+      description: '',
+      image: '',
+      category: categories[]._id,
+      price: ,
+      quantity: ,
+    },
+
+    {
+      name: '',
+      description: '',
+      image: '',
+      category: categories[]._id,
+      price: ,
+      quantity: ,
+    },
+
+    {
+      name: '',
+      description: '',
+      image: '',
+      category: categories[]._id,
+      price: ,
+      quantity: ,
+    },
+
+    {
+      name: '',
+      description: '',
+      image: '',
+      category: categories[]._id,
+      price: ,
+      quantity: ,
+    },
+
+    {
+      name: '',
+      description: '',
+      image: '',
+      category: categories[]._id,
+      price: ,
+      quantity: ,
+    },
+
+    {
+      name: '',
+      description: '',
+      image: '',
+      category: categories[]._id,
+      price: ,
+      quantity: ,
+    },
+
+    {
+      name: '',
+      description: '',
+      image: '',
+      category: categories[]._id,
+      price: ,
+      quantity: ,
+    },
+
+    {
+      name: '',
+      description: '',
+      image: '',
+      category: categories[]._id,
+      price: ,
+      quantity: ,
+    },
+
+    {
+      name: '',
+      description: '',
+      image: '',
+      category: categories[]._id,
+      price: ,
+      quantity: ,
+    },
+
+    {
+      name: '',
+      description: '',
+      image: '',
+      category: categories[]._id,
+      price: ,
+      quantity: ,
+    },
+
+    {
+      name: '',
+      description: '',
+      image: '',
+      category: categories[]._id,
+      price: ,
+      quantity: ,
+    },
+
+    {
+      name: '',
+      description: '',
+      image: '',
+      category: categories[]._id,
+      price: ,
+      quantity: ,
+    },
+
+    {
+      name: '',
+      description: '',
+      image: '',
+      category: categories[]._id,
+      price: ,
+      quantity: ,
+    },
+
+    {
+      name: '',
+      description: '',
+      image: '',
+      category: categories[]._id,
+      price: ,
+      quantity: ,
+    },
+
+    {
+      name: '',
+      description: '',
+      image: '',
+      category: categories[]._id,
+      price: ,
+      quantity: ,
+    },
+
+    {
+      name: '',
+      description: '',
+      image: '',
+      category: categories[]._id,
+      price: ,
+      quantity: ,
+    },
+
+    {
+      name: '',
+      description: '',
+      image: '',
+      category: categories[]._id,
+      price: ,
+      quantity: ,
+    },
+
+    {
+      name: '',
+      description: '',
+      image: '',
+      category: categories[]._id,
+      price: ,
+      quantity: ,
+    },
+
+    {
+      name: '',
+      description: '',
+      image: '',
+      category: categories[]._id,
+      price: ,
+      quantity: ,
+    },
+
+    {
+      name: '',
+      description: '',
+      image: '',
+      category: categories[]._id,
+      price: ,
+      quantity: ,
+    },
+
+    {
+      name: '',
+      description: '',
+      image: '',
+      category: categories[]._id,
+      price: ,
+      quantity: ,
+    },
+
+    {
+      name: '',
+      description: '',
+      image: '',
+      category: categories[]._id,
+      price: ,
+      quantity: ,
+    },
+
+    {
+      name: '',
+      description: '',
+      image: '',
+      category: categories[]._id,
+      price: ,
+      quantity: ,
+    },
+
+    {
+      name: '',
+      description: '',
+      image: '',
+      category: categories[]._id,
+      price: ,
+      quantity: ,
+    },
+
+    {
+      name: '',
+      description: '',
+      image: '',
+      category: categories[]._id,
+      price: ,
+      quantity: ,
+    },
+
+    {
+      name: '',
+      description: '',
+      image: '',
+      category: categories[]._id,
+      price: ,
+      quantity: ,
+    },
+
+    {
+      name: '',
+      description: '',
+      image: '',
+      category: categories[]._id,
+      price: ,
+      quantity: ,
+    },
+
+    {
+      name: '',
+      description: '',
+      image: '',
+      category: categories[]._id,
+      price: ,
+      quantity: ,
+    },
+
+
   ]);
 
   console.log('products seeded');

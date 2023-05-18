@@ -1,11 +1,12 @@
 import { Link } from 'react-router-dom';
-import Logo from '../assets/Logo.png';
+import Logo from '../../assets/Logo.png';
+import Home from '../../pages/Home';
 export default function Header() {
   return (
     <header>
       <nav class='navbar is-light is-fixed-top'>
         <div class='navbar-brand'>
-          <Link to='/' class='navbar-item'>
+          <Link to={Home} class='navbar-item'>
             <img src={Logo} alt='Thingamabobs' />
           </Link>
 

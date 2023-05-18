@@ -1,7 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Footer from './components/Footer';
-import Header from './components/Header';
+import Footer from './components/Footer/index';
+import Header from './components/Nav/index';
+import Home from './pages/Home';
+import Login from './pages/Login';
 import {
   ApolloClient,
   InMemoryCache,
@@ -9,7 +11,6 @@ import {
   createHttpLink,
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
-import AppNavbar from './components/Navbar';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -36,16 +37,24 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
-    <Router>
-      <>
-        <Header />
-        <Routes>
-          <Route 
-            path='*'
-            element={<h1 className='display-2'>Wrong page!</h1>}
-          />
-        </Routes>
-      </>
+      <Router>
+        <div className="flex-column justify-flex-start min-100-vh">
+          <Header />
+          <div className="container">
+            <Routes>
+              <Route 
+                path="/" 
+                element={<Home />} 
+              />
+              {/* Create a route to display a single thought's comments based on its `thoughtId` provided in the URL */}
+              <Route 
+                path="/login" 
+                element={<Login />} 
+              />
+            </Routes>
+          </div>
+          <Footer />
+        </div>
     </Router>
     <Footer />
     </ApolloProvider>

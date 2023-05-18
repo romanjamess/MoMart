@@ -1,14 +1,14 @@
 import { useReducer } from 'react';
 import {
   UPDATE_PRODUCTS,
-  ADD_TO_CART,
-  UPDATE_CART_QUANTITY,
-  REMOVE_FROM_CART,
-  ADD_MULTIPLE_TO_CART,
-  UPDATE_CATEGORIES,
+  ADD_CART,
+  UPDATE_QUANTITY_CART,
+  REMOVE_CART,
+  ADD_MANY_CART,
+  CATEGORIES_UPDATE,
   UPDATE_CURRENT_CATEGORY,
   CLEAR_CART,
-  TOGGLE_CART,
+  ACTIVATE_CART,
 } from './actions';
 
 export const reducer = (state, action) => {
@@ -19,18 +19,18 @@ export const reducer = (state, action) => {
         products: [...action.products],
       };
 
-    case ADD_TO_CART:
+    case ADD_CART:
       return {
         ...state,
         cartOpen: true,
         cart: [...state.cart, action.product],
       };
-    case ADD_MULTIPLE_TO_CART:
+    case ADD_MANY_CART:
       return {
         ...state,
         cart: [...state.cart, ...action.products],
       };
-    case UPDATE_CART_QUANTITY:
+    case UPDATE_QUANTITY_CART:
       return {
         ...state,
         cartOpen: true,
@@ -42,7 +42,7 @@ export const reducer = (state, action) => {
         }),
       };
 
-    case REMOVE_FROM_CART:
+    case REMOVE_CART:
       let newState = state.cart.filter((product) => {
         return product._id !== action._id;
       });
@@ -60,13 +60,13 @@ export const reducer = (state, action) => {
         cart: [],
       };
 
-    case TOGGLE_CART:
+    case ACTIVATE_CART:
       return {
         ...state,
         cartOpen: !state.cartOpen,
       };
 
-    case UPDATE_CATEGORIES:
+    case CATEGORIES_UPDATE:
       return {
         ...state,
         categories: [...action.categories],

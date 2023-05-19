@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const ProductList = ({products}) => {
+const ProductList = ({products=[]}) => {
 	return (
         <ul>
             {products.map((product) => <li>{product.name}</li>)}

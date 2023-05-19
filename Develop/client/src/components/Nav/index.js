@@ -1,12 +1,11 @@
 import { Link } from 'react-router-dom';
 import Logo from '../../assets/Logo.png';
-import Home from '../../pages/Home';
 export default function Header() {
   return (
     <header>
       <nav class='navbar is-light'>
         <div class='navbar-brand'>
-          <Link to={Home} class='navbar-item'>
+          <Link to='/' class='navbar-item'>
             <img src={Logo} alt='Thingamabobs' />
           </Link>
 
@@ -28,12 +27,6 @@ export default function Header() {
         </Link>
         <div class='navbar-end'>
           <p class='pt-3'>Hello, </p>
-          <Link to='/cart' class='navbar-item is-hoverable pt-1'>
-            <span class='material-icons'>shopping_bag</span>
-          </Link>
-          <Link to='/' id='logout' class='navbar-item is-hoverable pt-1'>
-            <span class='material-icons icon has-text-danger'>logout</span>
-          </Link>
         </div>
 
         <div class='navbar-end'>
@@ -42,6 +35,10 @@ export default function Header() {
           </Link>
           <Link to='/login' class='navbar-item is-hoverable pt-1'>
             <span class='material-icons'>account_circle</span>
+          </Link>
+          {/* Write an conditional statement that only displays logout button when user is logged in. */}
+          <Link to='/' id='logout' class='navbar-item is-hoverable pt-1'>
+            <span class='material-icons icon has-text-danger'>logout</span>
           </Link>
         </div>
       </nav>

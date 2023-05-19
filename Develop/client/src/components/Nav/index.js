@@ -4,7 +4,7 @@ import Home from '../../pages/Home';
 export default function Header() {
   return (
     <header>
-      <nav class='navbar is-light is-fixed-top'>
+      <nav class='navbar is-light'>
         <div class='navbar-brand'>
           <Link to={Home} class='navbar-item'>
             <img src={Logo} alt='Thingamabobs' />

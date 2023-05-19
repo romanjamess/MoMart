@@ -36,27 +36,23 @@ const client = new ApolloClient({
 
 function App() {
   return (
-    <ApolloProvider client={client}>
+<ApolloProvider client={client}>
       <Router>
-        <div className="flex-column justify-flex-start min-100-vh">
-          <Header />
-          <div className="container">
+      <Header />
+        <div>
             <Routes>
               <Route 
                 path="/" 
                 element={<Home />} 
               />
-              {/* Create a route to display a single thought's comments based on its `thoughtId` provided in the URL */}
               <Route 
                 path="/login" 
                 element={<Login />} 
               />
             </Routes>
-          </div>
-          <Footer />
+            <Footer />
         </div>
-    </Router>
-    <Footer />
+      </Router>
     </ApolloProvider>
   );
 }

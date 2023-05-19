@@ -19,7 +19,7 @@ import {
 import { setContext } from '@apollo/client/link/context';
 
 const httpLink = createHttpLink({
-	uri: '/graphql',
+  uri: 'http://localhost:3001/graphql',
 });
 
 // Construct request middleware that will attach the JWT token to every request as an `authorization` header
@@ -41,20 +41,26 @@ const client = new ApolloClient({
 });
 
 function App() {
-	return (
-		<BrowserRouter>
-			<ApolloProvider client={client}>
-				<Header />
-				<Routes>
-					<Route path='/' element={<Home />}>
-						<Route path='/login' element={<Login />} />
-						<Route path='/cart' element={<Cart />} />
-					</Route>
-				</Routes>
-				<Footer />
-			</ApolloProvider>
-		</BrowserRouter>
-	);
+  return (
+<ApolloProvider client={client}>
+      <Router>
+      <Header />
+        <div>
+            <Routes>
+              <Route 
+                path="/" 
+                element={<Home />} 
+              />
+              <Route 
+                path="/login" 
+                element={<Login />} 
+              />
+            </Routes>
+            <Footer />
+        </div>
+      </Router>
+    </ApolloProvider>
+  );
 }
 
 export default App;

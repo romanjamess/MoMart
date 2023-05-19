@@ -96,11 +96,23 @@ const resolvers = {
 
       return { token, user };
     },
-    addOrder: async (parent, { products }, context) => {
+    addOrder: async (parent , args, context) => {
+      // the front end user should send me a array of ids
+      //using that array of ids i should find all the relevant products
+      //once i find the relevant products they are structed in array of objects
+      // take array and map thru it and turn it into a mongoose. type objectID
+      //replace 111 to 113 with that array 
       console.log(context);
-      if (context.user) {
-        const order = new Order({ products });
-
+      if (context.user) { 
+        
+        const product =  await Product.findById(args.product_id);
+        const order = await Order.create({ products: 
+          
+          [
+           product
+        ]
+        });
+    
         await User.findByIdAndUpdate(context.user._id, {
           $push: { orders: order },
         });

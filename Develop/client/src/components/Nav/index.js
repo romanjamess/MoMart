@@ -3,16 +3,16 @@ import Logo from '../../assets/Logo.png';
 export default function Header() {
   return (
     <header>
-      <nav class='navbar is-light'>
-        <div class='navbar-brand'>
-          <Link to='/' class='navbar-item'>
+      <nav className='navbar is-light'>
+        <div className='navbar-brand'>
+          <Link to='/' className='navbar-item'>
             <img src={Logo} alt='Thingamabobs' />
           </Link>
 
           <a
             href='/'
             role='button'
-            class='navbar-burger'
+            className='navbar-burger'
             aria-label='menu'
             aria-expanded='false'
           >
@@ -22,23 +22,23 @@ export default function Header() {
           </a>
         </div>
 
-        <Link to='/catalog' class='navbar-item is-hoverable pt-1'>
-          <span class='material-icons'>sell</span>
+        <Link to='/catalog' className='navbar-item is-hoverable pt-1'>
+          <span className='material-icons'>sell</span>
         </Link>
-        <div class='navbar-end'>
-          <p class='pt-3'>Hello, </p>
+        <div className='navbar-end'>
+          <p className='pt-3'>Hello, </p>
         </div>
 
-        <div class='navbar-end'>
-          <Link to='/cart' class='navbar-item pt-1'>
-            <span class='material-icons'>shopping_bag</span>
+        <div className='navbar-end'>
+          <Link to='/cart' className='navbar-item pt-1'>
+            <span className='material-icons'>shopping_bag</span>
           </Link>
-          <Link to='/login' class='navbar-item is-hoverable pt-1'>
-            <span class='material-icons'>account_circle</span>
+          <Link to='/login' className='navbar-item is-hoverable pt-1'>
+            <span className='material-icons'>account_circle</span>
           </Link>
           {/* Write an conditional statement that only displays logout button when user is logged in. */}
-          <Link to='/' id='logout' class='navbar-item is-hoverable pt-1'>
-            <span class='material-icons icon has-text-danger'>logout</span>
+          <Link to='/' id='logout' className='navbar-item is-hoverable pt-1'>
+            <span className='material-icons icon has-text-danger'>logout</span>
           </Link>
         </div>
       </nav>

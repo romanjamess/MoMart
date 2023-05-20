@@ -8,7 +8,7 @@ import {
 import { QUERY_CATEGORIES } from '../../utils/queries';
 import { idbPromise } from '../../utils/helpers';
 
-const Category = () => {
+const CategoryMenu = () => {
 	const [state, dispatch] = useStoreContext();
 
 	const { categories } = state;
@@ -16,8 +16,9 @@ const Category = () => {
 	const { loading, data: categoryData } = useQuery(QUERY_CATEGORIES);
 
 	useEffect(() => {
-		if (loading) return 'Loading...';
+		console.log(categoryData);
 		if (categoryData) {
+			console.log(categoryData.categories);
 			dispatch({
 				type: CATEGORIES_UPDATE,
 				categories: categoryData.categories,
@@ -25,7 +26,8 @@ const Category = () => {
 			categoryData.categories.forEach((category) => {
 				idbPromise('categories', 'put', category);
 			});
-		} else if (!loading) {
+		}
+		if (!loading) {
 			idbPromise('categories', 'get').then((categories) => {
 				dispatch({
 					type: CATEGORIES_UPDATE,
@@ -44,16 +46,19 @@ const Category = () => {
 
 	return (
 		<div>
+			<h2>Choose a Category:</h2>
 			{categories.map((item) => (
-				<button 
-                key={item._id} 
-                onClick={() => handleClick(item._id)}
-                >
-                    {item.name}
-                </button>
+				<button
+					key={item._id}
+					onClick={() => {
+						handleClick(item._id);
+					}}
+				>
+					{item.name}
+				</button>
 			))}
 		</div>
 	);
 };
 
-export default Category;
+export default CategoryMenu;

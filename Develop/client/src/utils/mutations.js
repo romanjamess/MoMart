@@ -6,6 +6,7 @@ mutation addUser($firstName: String!, $lastName: String!, $email: String!, $pass
   addUser(firstName: $firstName, lastName: $lastName, email: $email, password: $password) {
     token
     user {
+      _id
       firstName
     }
   }

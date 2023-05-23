@@ -1,11 +1,13 @@
 import React from 'react';
 import CategoryMenu from '../components/CategoryMenu';
+import ProductList from '../components/ProductList';
 
 const Home = () => {
 	return (
 		<div className='productContainer'>
 			<div className='product'>test</div>
 			<CategoryMenu />
+			<ProductList />
 		</div>
 	)
 };

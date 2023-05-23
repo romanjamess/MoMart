@@ -3,9 +3,24 @@ import decode from 'jwt-decode';
 
 // create a new class to instantiate for a user
 class AuthService {
+  saveUserName(user) {
+   localStorage.setItem("user", JSON.stringify(user) )
+  }
+
+  getUserName(){
+  const user = JSON.parse(localStorage.getItem("user"))
+   console.log(user)
+   return user.firstName
+  }
+
+
   // get user data
   getProfile() {
-    return decode(this.getToken());
+    const token = this.getToken()
+    if(token) {
+      return decode(this.getToken());
+    }
+    return "No Token"
   }
 
   // check if user's logged in

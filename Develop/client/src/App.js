@@ -9,6 +9,7 @@ import Footer from './components/Footer/index';
 import Header from './components/Nav/index';
 import Home from './pages/Home';
 import Login from './pages/Login';
+import Signup from './pages/Signup';
 import Cart from './components/Cart';
 import {
 	ApolloClient,
@@ -47,13 +48,23 @@ function App() {
 			<Router>
 				<StoreProvider>
 					<Header />
-					<div>
-						<Routes>
-							<Route path='/' element={<Home />} />
-							<Route path='/login' element={<Login />} />
-						</Routes>
-						<Footer />
-					</div>
+        <div>
+            <Routes>
+              <Route 
+                path="/" 
+                element={<Home />} 
+              />
+              <Route 
+                path="/login" 
+                element={<Login />} 
+              />
+              <Route 
+                path="/signup" 
+                element={<Signup />} 
+              />
+            </Routes>
+            <Footer />
+        </div>
 				</StoreProvider>
 			</Router>
 		</ApolloProvider>

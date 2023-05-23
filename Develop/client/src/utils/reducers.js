@@ -1,8 +1,8 @@
 import { useReducer } from 'react';
 import {
   UPDATE_PRODUCTS,
-  ADD_CART,
-  UPDATE_QUANTITY_CART,
+  ADD_TO_CART,
+  UPDATE_CART_QUANTITY,
   REMOVE_CART,
   ADD_MANY_CART,
   CATEGORIES_UPDATE,
@@ -19,7 +19,7 @@ export const reducer = (state, action) => {
         products: [...action.products],
       };
 
-    case ADD_CART:
+    case ADD_TO_CART:
       return {
         ...state,
         cartOpen: true,
@@ -30,7 +30,7 @@ export const reducer = (state, action) => {
         ...state,
         cart: [...state.cart, ...action.products],
       };
-    case UPDATE_QUANTITY_CART:
+    case UPDATE_CART_QUANTITY:
       return {
         ...state,
         cartOpen: true,

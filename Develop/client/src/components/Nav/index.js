@@ -3,7 +3,6 @@ import Auth from "../../utils/auth"
 import Logo from '../../assets/Logo.png';
 
 export default function Header() {
-  
   function showNav() {
       return (
         <header>

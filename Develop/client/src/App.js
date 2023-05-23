@@ -62,6 +62,10 @@ function App() {
                 path="/signup" 
                 element={<Signup />} 
               />
+              <Route 
+                path="/cart" 
+                element={<Cart />} 
+              />
             </Routes>
             <Footer />
         </div>

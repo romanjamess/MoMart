@@ -5,9 +5,9 @@ import Cart from '../Cart';
 
 export default function Header() {
   function showNav() {
-    return (
-      <header id='header'>
-        <nav class='navbar is-light'>
+      return (
+        <header>
+        <nav className='navbar is-light is-fixed-top'>
           <div class='navbar-brand'>
             <Link to='/' class='navbar-item'>
               <img src={Logo} alt='Thingamabobs' />

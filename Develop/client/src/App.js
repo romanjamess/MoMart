@@ -21,6 +21,7 @@ import {
 } from '@apollo/client';
 import { StoreProvider } from './utils/GlobalState';
 import { setContext } from '@apollo/client/link/context';
+import Catalog from './pages/Catalog';
 
 const httpLink = createHttpLink({
 	uri: 'http://localhost:3001/graphql',
@@ -68,10 +69,17 @@ function App() {
                 path="/success" 
                 element={<Success />} 
               />
+
 			   <Route 
                 path="/products/:id" 
                 element={<Detail/>} 
 				/>
+
+              <Route 
+                path="/catalog" 
+                element={<Catalog />} 
+              />
+
             </Routes>
             <Footer /> 
         </div>

@@ -8,6 +8,8 @@ import {
 import Footer from './components/Footer/index';
 import Header from './components/Nav/index';
 import Home from './pages/Home';
+import Success from './pages/Success.js'; 
+import Detail from './pages/Detail.js';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Cart from './components/Cart';
@@ -62,12 +64,16 @@ function App() {
                 path="/signup" 
                 element={<Signup />} 
               />
-              <Route 
-                path="/cart" 
-                element={<Cart />} 
+			   <Route 
+                path="/success" 
+                element={<Success />} 
               />
+			   <Route 
+                path="/products/:id" 
+                element={<Detail/>} 
+				/>
             </Routes>
-            <Footer />
+            <Footer /> 
         </div>
 				</StoreProvider>
 			</Router>
@@ -76,3 +82,5 @@ function App() {
 }
 
 export default App;
+
+

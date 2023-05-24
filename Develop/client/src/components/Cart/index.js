@@ -63,9 +63,7 @@ const Cart = () => {
   if (!state.cartOpen) {
     return (
       <div className='cart-closed' onClick={toggleCart}>
-        <span role='img' aria-label='trash'>
-          
-        </span>
+        <span class='material-icons'>shopping_bag</span>
       </div>
     );
   }

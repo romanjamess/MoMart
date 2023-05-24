@@ -1,7 +1,6 @@
 import React from 'react';
 import CategoryMenu from '../components/CategoryMenu';
 import ProductList from '../components/ProductList';
-import Cart from '../components/Cart';
 
 const Home = () => {
   return (
@@ -9,7 +8,6 @@ const Home = () => {
       <div className='product'>test</div>
       <CategoryMenu />
       <ProductList />
-      <Cart />
     </div>
   );
 };

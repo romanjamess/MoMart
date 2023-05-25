@@ -94,7 +94,7 @@ function Detail() {
           <p>
             <strong>Price:</strong>${currentProduct.price}{' '}
             <button onClick={addToCart}>Add to Cart</button>
-            
+
           </p>
 
           <img

@@ -6,8 +6,8 @@ import { idbPromise } from '../../utils/helpers';
 import CartItem from '../CartItem';
 import Auth from '../../utils/auth';
 import { useStoreContext } from '../../utils/GlobalState';
-import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from '../../utils/actions';
-// import './style.css';
+import { ACTIVATE_CART, ADD_MULTIPLE_TO_CART } from '../../utils/actions';
+import './style.css';
 
 const stripePromise = loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
 
@@ -35,7 +35,7 @@ const Cart = () => {
   }, [state.cart.length, dispatch]);
 
   function toggleCart() {
-    dispatch({ type: TOGGLE_CART });
+    dispatch({ type: ACTIVATE_CART });
   }
 
   function calculateTotal() {
@@ -63,9 +63,7 @@ const Cart = () => {
   if (!state.cartOpen) {
     return (
       <div className='cart-closed' onClick={toggleCart}>
-        <span role='img' aria-label='trash'>
-          🛒
-        </span>
+        <span class='material-icons'>shopping_bag</span>
       </div>
     );
   }
@@ -73,7 +71,7 @@ const Cart = () => {
   return (
     <div className='cart'>
       <div className='close' onClick={toggleCart}>
-        [close]
+        <span class='material-icons' id='cart-close'>close</span>
       </div>
       <h2>Shopping Cart</h2>
       {state.cart.length ? (

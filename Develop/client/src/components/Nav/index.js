@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import Auth from "../../utils/auth"
 import Logo from '../../assets/Logo.png';
+import Cart from '../Cart';
 
 export default function Header() {
   function showNav() {
@@ -37,9 +38,7 @@ export default function Header() {
           </div>
   
           <div class='navbar-end'>
-            <Link to='/cart' class='navbar-item pt-1'>
-              <span class='material-icons'>shopping_bag</span>
-            </Link>
+            
             </div>
             <Link to='/' onClick={() => Auth.logout()} id='logout' class='navbar-item is-hoverable pt-1'>
             <span class='material-icons icon has-text-danger'>logout</span>

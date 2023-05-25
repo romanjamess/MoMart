@@ -6,10 +6,13 @@ export default function Header() {
   function showNav() {
       return (
         <header>
-        <nav className='navbar is-light is-fixed-top'>
+
+        <nav class='navbar is-dark'>
+
+
           <div class='navbar-brand'>
             <Link to='/' class='navbar-item'>
-              <img src={Logo} alt='Thingamabobs' />
+              <img className= "Logo" src={Logo} alt='MoMart' />
             </Link>
   
             <a
@@ -27,7 +30,7 @@ export default function Header() {
           {Auth.loggedIn() ? (
             <>
           <Link to='/catalog' class='navbar-item is-hoverable pt-1'>
-            <span class='material-icons'>sell</span>
+            <span class='material-icons '>sell</span>
           </Link>
           <div class='navbar-end'>
             <p class='pt-3'>Hello, {Auth.getUserName()}</p>

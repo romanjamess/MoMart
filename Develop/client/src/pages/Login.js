@@ -31,38 +31,52 @@ function Login(props) {
   };
 
   return (
-    <div className="container my-1">
+    <div className="column is-one-third container my-1">
       {/* <Link to="/signup">← Go to Signup</Link> */}
 
-      <h2>Login</h2>
-      <form onSubmit={handleFormSubmit}>
-        <div className="flex-row space-between my-2">
+      <h2 class="title has-text-centered">Login to view your Cart</h2><hr></hr>
+
+      {/* Email Field */}
+      <form  onSubmit={handleFormSubmit} class="login-form">
+        <div className="flex-row space-between my-2 field">
           <label htmlFor="email">Email address:</label>
-          <input
+          <p class="control has-icons-left">
+          <input 
+            class="input"
             placeholder="youremail@test.com"
             name="email"
             type="email"
             id="email"
             onChange={handleChange}
-          />
+          /><span class="icon is-small is-left">
+          <i class="fas fa-envelope"></i>
+        </span>
+        </p>
         </div>
-        <div className="flex-row space-between my-2">
+        {/* Password Field */}
+        <div className="flex-row space-between my-2 field">
           <label htmlFor="pwd">Password:</label>
+          <p class="control has-icons-left">
           <input
+            class="input"
             placeholder="******"
             name="password"
             type="password"
             id="pwd"
             onChange={handleChange}
-          />
+          /><span class="icon is-small is-left">
+          <i class="fas fa-lock"></i>
+        </span>
+        </p>
         </div>
         {error ? (
           <div>
             <p className="error-text">The provided credentials are incorrect</p>
           </div>
         ) : null}
+        {/* Submit Button */}
         <div className="flex-row flex-end">
-          <button type="submit">Submit</button>
+          <button class="button is-dark is-fullwidth" type="submit">Submit</button>
         </div>
       </form>
     </div>

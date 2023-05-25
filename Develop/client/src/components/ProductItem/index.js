@@ -40,9 +40,10 @@ const ProductItem = item => {
   }
 
   return (
-    <div className="card px-1 py-1">
+    <div className="card px-1 py-1 w-50">
       <Link to={`/products/${_id}`}>
         <img
+        className = "product-img"  
           alt={name}
           src={`/images/${image}`}
         />

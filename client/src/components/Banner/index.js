@@ -8,7 +8,7 @@ function Banner () {
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
-  const toRotate = [ " We like to MO SHOP", " We like to have MO FUN", " We like to MO CODE" ];
+  const toRotate = [ " We like to MO' SHOP", " We like to have MO' FUN", " We like to MO' CODE" ];
   const period = 1000;
 
   useEffect(() => {
@@ -22,7 +22,7 @@ function Banner () {
   const tick = () => {
     let i = loopNum % toRotate.length;
     let fullText = toRotate[i];
-    let updatedText = isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1);
+    let updatedText = isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 4);
 
     setText(updatedText);
 

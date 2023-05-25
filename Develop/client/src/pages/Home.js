@@ -4,7 +4,7 @@ import ProductList from '../components/ProductList/Product10';
 const Home = () => {
 	return (
 		<div className='productContainer'>
-			<div className='product'>test</div>
+			<div className='product'></div>
 			{
 			<ProductList /> }
 		</div>

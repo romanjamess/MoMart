@@ -6,7 +6,10 @@ export default function Header() {
   function showNav() {
       return (
         <header>
+
         <nav class='navbar is-dark'>
+
+
           <div class='navbar-brand'>
             <Link to='/' class='navbar-item'>
               <img className= "Logo" src={Logo} alt='MoMart' />

@@ -8,8 +8,6 @@ import {
 import Footer from './components/Footer/index';
 import Header from './components/Nav/index';
 import Home from './pages/Home';
-import Success from './pages/Success.js'; 
-import Detail from './pages/Detail.js';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Cart from './components/Cart';
@@ -21,6 +19,7 @@ import {
 } from '@apollo/client';
 import { StoreProvider } from './utils/GlobalState';
 import { setContext } from '@apollo/client/link/context';
+import Catalog from './pages/Catalog';
 
 const httpLink = createHttpLink({
 	uri: 'http://localhost:3001/graphql',
@@ -64,16 +63,16 @@ function App() {
                 path="/signup" 
                 element={<Signup />} 
               />
-			   <Route 
-                path="/success" 
-                element={<Success />} 
+              <Route 
+                path="/cart" 
+                element={<Cart />} 
               />
-			   <Route 
-                path="/products/:id" 
-                element={<Detail/>} 
-				/>
+              <Route 
+                path="/catalog" 
+                element={<Catalog />} 
+              />
             </Routes>
-            <Footer /> 
+            <Footer />
         </div>
 				</StoreProvider>
 			</Router>
@@ -82,5 +81,3 @@ function App() {
 }
 
 export default App;
-
-

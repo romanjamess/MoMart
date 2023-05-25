@@ -1,13 +1,12 @@
 import React from 'react';
-import ProductList from '../components/ProductList';
+import ProductList from '../components/ProductList/Product10';
 
 const Home = () => {
 	return (
 		<div className='productContainer'>
-			<div className='product'></div>
-			<Cart />
-			<CategoryMenu />
-			<ProductList />
+			<div className='product'>test</div>
+			{
+			<ProductList /> }
 		</div>
 	)
 };

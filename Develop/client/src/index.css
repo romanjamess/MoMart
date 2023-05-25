@@ -88,6 +88,7 @@ code {
   padding: 20px;
   flex-wrap: wrap;
   justify-content: space-around;
+  /* margin-top: 30px; */
 }
 
 .myNav {
@@ -96,4 +97,8 @@ display: flex;
 flex-direction: row;
 justify-content: space-around;
 align-items: center;
+}
+
+.main-div {
+  margin-top: 100px
 }

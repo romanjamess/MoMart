@@ -37,6 +37,7 @@ const ProductItem = item => {
       });
       idbPromise('cart', 'put', { ...item, purchaseQuantity: 1 });
     }
+    alert("hello world")
   }
 
   return (

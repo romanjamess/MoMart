@@ -49,7 +49,7 @@ function App() {
 			<Router>
 				<StoreProvider>
 					<Header />
-        <div>
+        <div className='main-div'>
             <Routes>
               <Route 
                 path="/" 

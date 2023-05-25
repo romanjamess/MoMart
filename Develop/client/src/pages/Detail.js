@@ -5,7 +5,7 @@ import { useQuery } from '@apollo/client';
 import Cart from '../components/Cart';
 import { useStoreContext } from '../utils/GlobalState';
 import {
-//   REMOVE_FROM_CART,
+  //   REMOVE_FROM_CART,
   UPDATE_CART_QUANTITY,
   ADD_TO_CART,
   UPDATE_PRODUCTS,
@@ -72,20 +72,20 @@ function Detail() {
     }
   };
 
-//   const removeFromCart = () => {
-//     dispatch({
-//       type: REMOVE_FROM_CART,
-//       _id: currentProduct._id,
-//     });
+  //   const removeFromCart = () => {
+  //     dispatch({
+  //       type: REMOVE_FROM_CART,
+  //       _id: currentProduct._id,
+  //     });
 
-//     idbPromise('cart', 'delete', { ...currentProduct });
-//   };
+  //     idbPromise('cart', 'delete', { ...currentProduct });
+  //   };
 
   return (
     <>
       {currentProduct && cart ? (
-        <div className="container my-1">
-          <Link to="/">← Back to Products</Link>
+        <div className='container my-1'>
+          <Link to='/'>← Back to Products</Link>
 
           <h2>{currentProduct.name}</h2>
 
@@ -94,7 +94,6 @@ function Detail() {
           <p>
             <strong>Price:</strong>${currentProduct.price}{' '}
             <button onClick={addToCart}>Add to Cart</button>
-
           </p>
 
           <img

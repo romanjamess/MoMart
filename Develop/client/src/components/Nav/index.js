@@ -38,9 +38,7 @@ export default function Header() {
           </div>
   
           <div class='navbar-end'>
-            <div to='/cart' class='navbar-item pt-1'>
-              <Cart />
-            </div>
+            
             </div>
             <Link to='/' onClick={() => Auth.logout()} id='logout' class='navbar-item is-hoverable pt-1'>
             <span class='material-icons icon has-text-danger'>logout</span>

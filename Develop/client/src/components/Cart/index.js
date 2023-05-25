@@ -71,7 +71,7 @@ const Cart = () => {
   return (
     <div className='cart'>
       <div className='close' onClick={toggleCart}>
-        [close]
+        <span class='material-icons' id='cart-close'>close</span>
       </div>
       <h2>Shopping Cart</h2>
       {state.cart.length ? (

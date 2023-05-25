@@ -4,9 +4,10 @@ import ProductList from '../components/ProductList';
 const Home = () => {
 	return (
 		<div className='productContainer'>
-			<div className='product'>test</div>
-			{/* <CategoryMenu />
-			<ProductList /> */}
+			<div className='product'></div>
+			<Cart />
+			<CategoryMenu />
+			<ProductList />
 		</div>
 	)
 };

@@ -115,3 +115,7 @@ align-items: center;
 .product-card {
   width: 50%; 
 }
+ 
+.main-div {
+  margin-top: 70px;
+}

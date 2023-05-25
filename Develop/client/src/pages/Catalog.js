@@ -5,7 +5,7 @@ import ProductList from '../components/ProductList';
 const Catalog = () => {
 	return (
 		<div className='productContainer'>
-			<div className='product'>test</div>
+			<div className='product'></div>
 			<CategoryMenu />
 			<ProductList />
 		</div>

@@ -36,7 +36,6 @@ const Cart = () => {
 
   function toggleCart() {
     dispatch({ type: TOGGLE_CART });
-    
   }
 
   function calculateTotal() {

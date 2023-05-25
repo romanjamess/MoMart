@@ -119,3 +119,9 @@ align-items: center;
 .main-div {
   margin-top: 70px;
 }
+
+.texting {
+  font-size: 50px;
+  text-align: center;
+  font-weight: bolder;
+}

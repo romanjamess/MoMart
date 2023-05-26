@@ -34,16 +34,33 @@ const ProductItem = (item) => {
   };
 
   return (
-    <div className='card px-1 py-1 w-50'>
-      <Link to={`/products/${_id}`}>
-        <img className='product-img' alt={name} src={`/images/${image}`} />
-        <p>{name}</p>
-      </Link>
-      <div>
-        <div>{quantity} in stock</div>
-        <span>${price}</span>
-      </div>
-      <button onClick={addToCart}>Add to cart</button>
+    // <div className='card px-1 py-1 w-50'>
+    //   <Link to={`/products/${_id}`}>
+    //     <img className='product-img' alt={name} src={`/images/${image}`} />
+    //     <p>{name}</p>
+    //   </Link>
+    //   <div>
+    //     <div>{quantity} in stock</div>
+    //     <span>${price}</span>
+    //   </div>
+    //   <button onClick={addToCart}>Add to cart</button>
+    // </div>
+
+    
+    <div className='mb-1 mr-2 ml-2 catalog card column is-one-fifth is-inline-flex'>
+        <div className='card-image '>
+        <Link to={`/products/${_id}`}><figure class="image is-2by2"><img className='' alt={name} src={`/images/${image}`} /></figure></Link>
+          <div class="card-content">
+            <div class="content">
+            <Link to={`/products/${_id}`}><p class="title is-5">{name}</p></Link>
+             <span class="subtitle-3">${price}</span>
+             <p>{quantity} in stock</p>
+            </div>
+          </div>
+          <footer class="card-footer">
+              <button class="card-footer-item button is-dark is-fullwidth" onClick={addToCart}>Add to cart</button>
+            </footer>
+        </div>
     </div>
   );
 };

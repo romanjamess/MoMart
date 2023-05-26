@@ -45,15 +45,11 @@ const CategoryMenu = () => {
 	};
 
 	return (
-		<div class="tabs">
+		<div class="tabs is-centered is-fullwidth is-boxed ">
 			{categories.map((item) => (
 				<ul>
-					<li
-					key={item._id}
-					onClick={() => {
-						handleClick(item._id);
-					}}>
-					{item.name}
+				<li class="">
+					<a key={item._id}onClick={() => {handleClick(item._id);}}>{item.name}</a>
 				</li>
 				</ul>
 			))}

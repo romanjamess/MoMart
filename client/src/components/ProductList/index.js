@@ -45,10 +45,10 @@ const ProductList = () => {
   }
 
   return (
-    <div className="my-2">
-      <h2>Our Products:</h2>
+    <div className="">
+      {/* <h2>Our Products:</h2> */}
       {state.products.length ? (
-        <div className="flex-row">
+        <div className="columns is-multiline">
           {filterProducts().map((product) => (
             <ProductItem
               key={product._id}

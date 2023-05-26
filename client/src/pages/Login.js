@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from "../utils/mutations"
 import Auth from '../utils/auth';
+import { Link } from 'react-router-dom';
 // import { Link } from 'react-router-dom';
 
 function Login(props) {
@@ -32,8 +33,6 @@ function Login(props) {
 
   return (
     <div className="column is-one-third container my-1">
-      {/* <Link to="/signup">← Go to Signup</Link> */}
-
       <h2 class="title has-text-centered">Login to view your Cart</h2><hr></hr>
 
       {/* Email Field */}
@@ -77,7 +76,11 @@ function Login(props) {
         {/* Submit Button */}
         <div className="flex-row flex-end">
           <button class="button is-dark is-fullwidth" type="submit">Submit</button>
+
+          <p class="pb-1 pt-4 has-text-centered">Don't have an account, Create new account:</p>
+          <Link to="/Signup"><button type="button" class="button is-light is-fullwidth">Sign Up</button></Link>
         </div>
+        
       </form>
     </div>
   );
